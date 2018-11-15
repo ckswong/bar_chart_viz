@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+  <div class="ChartTitle">US Gun Violence Data</div>
+  <div class="ChartOptions">
+    <label class="ChartSelectLabel" for="count">Threshold number of fatalities for Mass Shooting</label>
+    <select
+      class="ChartSelect js-count-select"
+      name="count"
+      onchange="onChangeHandler(value, 'minThreshold');"
+    >
+    </select>
+    <label class="ChartSelectLabel" for="year">Select Year</label>
+    <select 
+      class="ChartSelect js-year-select" 
+      name="year" 
+      onchange="onChangeHandler(value, 'selectedYear');"
+    >
+    </select>
+  </div>
+  <div class="ChartWrapper">
+    <div class="ChartWrapper-xTitle">Number of Mass Shootings</div>
+    <div class="ChartWrapper-yTitle">Month</div>
+    <div class="ChartMarkers">
+      <div class="Increments">
+        <div class="Increments-increment">25</div>
+        <div class="Increments-increment">20</div>
+        <div class="Increments-increment">15</div>
+        <div class="Increments-increment">10</div>
+        <div class="Increments-increment">5</div>
+      </div>
+      <div class="Delineators">
+        <div class="Delineators-delineator"></div>
+        <div class="Delineators-delineator"></div>
+        <div class="Delineators-delineator"></div>
+        <div class="Delineators-delineator"></div>
+        <div class="Delineators-delineator"></div>
+      </div>
+    </div>
+    <div class="ChartBars js-Bars"></div>
+  </div>
+  <script src="./js/main.js"></script>
+
+</html>
